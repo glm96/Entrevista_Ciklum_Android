@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">testCiklumEntrevistaApp</string>
+    <string name="create">Create</string>
+    <string name="read">Read</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+</resources>

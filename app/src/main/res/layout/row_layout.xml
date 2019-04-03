@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/dep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="36dp"
+        android:text="SVO"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/dest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/dep"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/dep"
+        android:text="SVO"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/depdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dep"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="6dp"
+        android:text="12/12/96 12:24" />
+
+    <TextView
+        android:id="@+id/destdate"
+        android:layout_width="118dp"
+        android:layout_height="18dp"
+        android:layout_below="@+id/dest"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="179dp"
+        android:layout_marginTop="6dp"
+        android:text="12/12/96 12:24" />
+
+    <TextView
+        android:id="@+id/hotelname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="7dp"
+        android:text="Suimeikan      5/5"
+        android:textSize="18sp" />
+
+</RelativeLayout>

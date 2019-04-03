@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateDeleteActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/obarrcode"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="14dp"
+        android:text="Hotel" />
+
+    <EditText
+        android:id="@+id/obarrcode"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/obdepcode"
+        android:layout_alignStart="@+id/ibdepcode"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="ArrCode"
+        android:inputType="text"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/obarrdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/obdepdate"
+        android:layout_alignTop="@+id/obarrcode"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-1dp"
+        android:ems="10"
+        android:hint="dd/MM/yy HH:mm:ss"
+        android:inputType="datetime"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/obdepdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ibarrdate"
+        android:layout_alignTop="@+id/obdepcode"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:hint="dd/MM/yy HH:mm:ss"
+        android:inputType="datetime"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/obdepcode"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ibarrcode"
+        android:layout_alignTop="@+id/obfcode"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:hint="DepCode"
+        android:inputType="text"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/obfcode"
+        android:layout_width="81dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="Flight Code"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ibarrcode"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="14dp"
+        android:text="Outbound Flight" />
+
+    <EditText
+        android:id="@+id/ibarrcode"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ibdepcode"
+        android:layout_alignStart="@+id/ibdepcode"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="ArrCode"
+        android:inputType="text"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/ibarrdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ibdepdate"
+        android:layout_alignTop="@+id/ibarrcode"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:hint="dd/MM/yy HH:mm:ss"
+        android:inputType="datetime"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="14dp"
+        android:text="Inbound Flight" />
+
+    <EditText
+        android:id="@+id/ibfcode"
+        android:layout_width="83dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Flight Code"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/ibdepcode"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignTop="@+id/ibfcode"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:hint="DepCode"
+        android:inputType="text"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/ibdepdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignTop="@+id/ibfcode"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="1dp"
+        android:ems="10"
+        android:hint="dd/MM/yy HH:mm:ss"
+        android:inputType="datetime"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/hotelname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/hotelrating"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hotelname"
+        android:layout_alignStart="@+id/hotelname"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="Rating"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/hotellatitude"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/hotelrating"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/hotelrating"
+        android:ems="10"
+        android:hint="Latitude"
+        android:inputType="numberDecimal"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/hotellongitude"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/hotelrating"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/hotellatitude"
+        android:ems="10"
+        android:hint="Longitude"
+        android:inputType="numberDecimal"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/hotelcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/obarrdate"
+        android:layout_alignTop="@+id/hotelname"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:ems="10"
+        android:hint="Code"
+        android:inputType="numberDecimal"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/price"
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hotelrating"
+        android:layout_alignStart="@+id/hotelrating"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="Price in €"
+        android:inputType="numberDecimal"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_alignTop="@+id/price"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/price"
+        android:onClick="onClickDelete"
+        android:text="@string/delete" />
+
+    <Button
+        android:id="@+id/buttonSubmit2"
+        android:layout_width="101dp"
+        android:layout_height="36dp"
+        android:layout_alignTop="@+id/price"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/price"
+        android:onClick="onClickUpdate"
+        android:text="@string/update" />
+
+</RelativeLayout>
