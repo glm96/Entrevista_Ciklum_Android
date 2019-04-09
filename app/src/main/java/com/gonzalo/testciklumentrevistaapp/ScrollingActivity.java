@@ -36,7 +36,8 @@ public class ScrollingActivity extends AppCompatActivity {
 
 
     RequestQueue requestQueue;
-    HashMap<String,String> map;
+    String URL = "https://ciklumentrevista.appspot.com/holidaypackages";
+    String uri;
     HolidayPackagesAdapter adapter;
     RecyclerView recyclerView;
 
@@ -47,19 +48,24 @@ public class ScrollingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scrolling);
         requestQueue = Volley.newRequestQueue(this);
-        map = (HashMap) getIntent().getSerializableExtra("map");
+        uri = getIntent().getStringExtra("queryparams");
         recyclerView = findViewById(R.id.recyclerView);
+        doGet(URL+uri);
 
-        doGet(map);
 
+/*
+        Log.d("URL",map.get("IATAorigin"));
+        Log.d("URL",map.get("IATAarrival"));
+        Log.d("URL",map.get("rating"));
+        Log.d("URL",map.get("sort1"));
+        Log.d("URL",map.get("sort2"));*/
 
 
         }
 
-    public void doGet (Map<String,String> paramsmap){
+    public void doGet (String url){
 
-        final Map<String,String> params = paramsmap;
-        JsonArrayRequest getRequest = new JsonArrayRequest(Request.Method.GET, "https://ciklumentrevista.appspot.com/holidaypackages", null,
+        final JsonArrayRequest getRequest = new JsonArrayRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONArray>()
                 {
                     @Override
@@ -97,19 +103,11 @@ public class ScrollingActivity extends AppCompatActivity {
                     }
                 })
         {
-            @Override
-            protected Map<String,String> getParams(){
-                return params;
-            }
-            @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
-                Map<String,String> params = new HashMap<String, String>();
-                params.put("Content-Type","application/json");
-                return params;
-            }
+
         };
 // add it to the RequestQueue
         requestQueue.add(getRequest);
+        Log.d("URL",getRequest.getUrl());
     }
 
 }

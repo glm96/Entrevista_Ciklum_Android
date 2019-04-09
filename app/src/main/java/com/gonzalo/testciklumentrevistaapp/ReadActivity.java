@@ -3,6 +3,7 @@ package com.gonzalo.testciklumentrevistaapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -51,7 +52,7 @@ public class ReadActivity extends AppCompatActivity {
     }
 
     public void onClickSubmit(View v){
-        String arr, dep, star,sort1,sort2;
+        String arr, dep, star,sort1,sort2, URL = "?";
         arr = arrAirport.getText().toString();
         dep = depAirport.getText().toString();
         star = starRating.getText().toString();
@@ -60,19 +61,18 @@ public class ReadActivity extends AppCompatActivity {
         sort1 = ammendSort(sort1,1);
         sort2 = ammendSort(sort2,2);
 
-        HashMap<String,String> map = new HashMap<>();
-        if(arr!="")
-            map.put("IATAarrival",arr);
-        if(dep!="")
-            map.put("IATAorigin",arr);
-        if(star!="")
-            map.put("rating",arr);
-        map.put("sort1",sort1);
-        map.put("sort2",sort2);
+        if(!arr.equals(""))
+            URL += "IATAarrival="+arr + "&";
+        if(!dep.equals(""))
+            URL += "IATAorigin="+dep+"&";
+        if(!star.equals(""))
+            URL += "rating="+star+"&";
+        URL += "sort1="+sort1+"&";
+        URL += "sort2="+sort2;
 
         Intent i = new Intent(this,ScrollingActivity.class);
         i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        i.putExtra("mapa",map);
+        i.putExtra("queryparams", URL);
         startActivity(i);
 
     }
